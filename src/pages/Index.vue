@@ -1,6 +1,10 @@
 <template>
   <q-page class="q-pa-md">
 
+    <center>
+      <p class="text-h5">😃 Welcome! Choose a board to explore! 🗺️</p>
+    </center>
+
     <div class="row">
 
       <!-- Orange Pi -->
