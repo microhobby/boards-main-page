@@ -26,7 +26,7 @@
 
             <q-card-actions vertical class="justify-around q-px-md">
               <q-btn flat round color="info" icon="info" @click="infoClick(1)" />
-              <q-btn flat round color="green" icon="play_arrow" />
+              <q-btn flat round color="green" icon="play_arrow" @click="goClick(1)" />
             </q-card-actions>
           </q-card-section>
         </q-card>
@@ -51,7 +51,7 @@
 
             <q-card-actions vertical class="justify-around q-px-md">
               <q-btn flat round color="info" icon="info" @click="infoClick(2)" />
-              <q-btn flat round color="green" icon="play_arrow" />
+              <q-btn flat round color="green" icon="play_arrow" @click="goClick(2)" />
             </q-card-actions>
           </q-card-section>
         </q-card>
@@ -83,6 +83,13 @@ export default {
       } else if (ix === 2) {
         this.board2Hide = !this.board2Hide
         this.board2Hide ? this.board2Trans = 'absolute-bottom animated slideInUp' : this.board2Trans = 'absolute-bottom animated slideOutDown'
+      }
+    },
+    goClick (ix) {
+      if (ix === 1) {
+        window.open('https://boards.microhobby.com.br/orangepi/html/index.html', '_blank')
+      } else if (ix === 2) {
+        window.open('https://boards.microhobby.com.br/roduino/html/index.html', '_blank')
       }
     }
   }
