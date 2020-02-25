@@ -7,6 +7,31 @@
 
     <div class="row justify-center wrap">
 
+      <!-- Labrador -->
+      <div class="col-auto">
+        <q-card class="my-card" flat bordered>
+          <q-card-section horizontal>
+            <q-img
+              class="col"
+              src="statics/labrador.boardFront.png"
+              style="background-color: #676767;"
+            >
+              <div
+                :class="board3Trans"
+              >
+                <div class="text-h6">Labrador v2</div>
+                <div class="text-subtitle2">Brazilian Computer on Module</div>
+              </div>
+            </q-img>
+
+            <q-card-actions vertical class="justify-around q-px-md">
+              <q-btn flat round color="info" icon="info" @click="infoClick(3)" />
+              <q-btn flat round color="green" icon="play_arrow" @click="goClick(3)" />
+            </q-card-actions>
+          </q-card-section>
+        </q-card>
+      </div>
+
       <!-- Orange Pi -->
       <div class="col-auto">
         <q-card class="my-card" flat bordered>
@@ -70,8 +95,10 @@ export default {
     return {
       board1Hide: false,
       board2Hide: false,
+      board3Hide: false,
       board1Trans: 'absolute-bottom hidden',
-      board2Trans: 'absolute-bottom hidden'
+      board2Trans: 'absolute-bottom hidden',
+      board3Trans: 'absolute-bottom hidden'
     }
   },
   methods: {
@@ -83,6 +110,9 @@ export default {
       } else if (ix === 2) {
         this.board2Hide = !this.board2Hide
         this.board2Hide ? this.board2Trans = 'absolute-bottom animated slideInUp' : this.board2Trans = 'absolute-bottom animated slideOutDown'
+      } else if (ix === 3) {
+        this.board3Hide = !this.board3Hide
+        this.board3Hide ? this.board3Trans = 'absolute-bottom animated slideInUp' : this.board3Trans = 'absolute-bottom animated slideOutDown'
       }
     },
     goClick (ix) {
@@ -90,6 +120,8 @@ export default {
         window.open('https://boards.microhobby.com.br/orangepi/html/index.html', '_blank')
       } else if (ix === 2) {
         window.open('https://boards.microhobby.com.br/roduino/html/index.html', '_blank')
+      } else if (ix === 3) {
+        window.open('https://boards.microhobby.com.br/labradorv2/html/index.html', '_blank')
       }
     }
   }
