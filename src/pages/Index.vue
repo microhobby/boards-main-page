@@ -14,7 +14,7 @@
             <q-img
               class="col"
               src="statics/labrador.boardFront.png"
-              style="background-color: #676767;"
+              style="background-color: #d4d4d4;"
             >
               <div
                 :class="board3Trans"
@@ -39,7 +39,7 @@
             <q-img
               class="col"
               src="statics/1521880910218.boardFront.png"
-              style="background-color: #676767"
+              style="background-color: #d4d4d4"
             >
               <div
                 :class="board1Trans"
@@ -64,7 +64,7 @@
             <q-img
               class="col"
               src="statics/1525646171318.boardFront.png"
-              style="background-color: #676767;"
+              style="background-color: #d4d4d4;"
             >
               <div
                 :class="board2Trans"
