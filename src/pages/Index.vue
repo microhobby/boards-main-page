@@ -13,6 +13,31 @@
           <q-card-section horizontal>
             <q-img
               class="col"
+              src="statics/labradorbb.boardFront.png"
+              style="background-color: #d4d4d4;"
+            >
+              <div
+                :class="board4Trans"
+              >
+                <div class="text-h6">Labrador Base Board M v1.0</div>
+                <div class="text-subtitle2">Brazilian Single Board Computer</div>
+              </div>
+            </q-img>
+
+            <q-card-actions vertical class="justify-around q-px-md">
+              <q-btn flat round color="info" icon="info" @click="infoClick(4)" />
+              <q-btn flat round color="green" icon="play_arrow" @click="goClick(4)" />
+            </q-card-actions>
+          </q-card-section>
+        </q-card>
+      </div>
+
+      <!-- Labrador -->
+      <div class="col-auto">
+        <q-card class="my-card" flat bordered>
+          <q-card-section horizontal>
+            <q-img
+              class="col"
               src="statics/labrador.boardFront.png"
               style="background-color: #d4d4d4;"
             >
@@ -96,9 +121,11 @@ export default {
       board1Hide: false,
       board2Hide: false,
       board3Hide: false,
+      board4Hide: false,
       board1Trans: 'absolute-bottom hidden',
       board2Trans: 'absolute-bottom hidden',
-      board3Trans: 'absolute-bottom hidden'
+      board3Trans: 'absolute-bottom hidden',
+      board4Trans: 'absolute-bottom hidden'
     }
   },
   methods: {
@@ -113,6 +140,9 @@ export default {
       } else if (ix === 3) {
         this.board3Hide = !this.board3Hide
         this.board3Hide ? this.board3Trans = 'absolute-bottom animated slideInUp' : this.board3Trans = 'absolute-bottom animated slideOutDown'
+      } else if (ix === 4) {
+        this.board4Hide = !this.board4Hide
+        this.board4Hide ? this.board4Trans = 'absolute-bottom animated slideInUp' : this.board4Trans = 'absolute-bottom animated slideOutDown'
       }
     },
     goClick (ix) {
@@ -122,6 +152,8 @@ export default {
         window.open('https://boards.microhobby.com.br/roduino/html/index.html', '_blank')
       } else if (ix === 3) {
         window.open('https://boards.microhobby.com.br/labradorv2/html/index.html', '_blank')
+      } else if (ix === 4) {
+        window.open('https://boards.microhobby.com.br/labradorbb/html/index.html', '_blank')
       }
     }
   }
